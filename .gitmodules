@@ -1,0 +1,3 @@
+[submodule "src/cabits-libs"]
+	path = src/cabits-libs
+	url = https://gitee.com/hongpucorp/cabits-libs.git

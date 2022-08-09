@@ -1,0 +1,19 @@
+# 放置于项目根目录中
+
+# 编译相对路径
+compile_path: './'
+
+# 需要编译的模块名称(容器根目录下)
+include_module_name_list: ['apps', 'celery_tasks', 'common', 'libs']
+
+# 排除的文件名称列表
+exclude_file_name_list: ['__init__.py', 'start.py', 'gconfig.py', 'manage.py']
+
+# 排除的文件夹名称列表
+exclude_folder_name_list: ['compile', '__pycache__', 'migrations', 'db_tools']
+
+# 额外需要删除的文件(容器根目录相对路径)
+need_clean_file_folder_path_list: [
+  './manage.py',
+  './requirements.txt'
+]
