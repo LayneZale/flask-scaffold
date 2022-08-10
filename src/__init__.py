@@ -26,11 +26,11 @@ def create_app():
             os.environ[key] = str(value)
 
     app = Flask(__name__)
+    app.name = 'flask-scaffold'
+    # 初始化日志
+    from src.common.logger import Log
+    Log.init(app.name)
 
-    # # 初始化日志
-    # from utils import ttlog
-    # ttlog.create_logger(settings.log_path, 'app.log', settings.log_level)
-    #
     # # Redis数据库连接初始化
     # from redis import StrictRedis
     # app.redis = StrictRedis(**app.config['REDIS'])
