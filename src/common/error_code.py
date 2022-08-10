@@ -1,5 +1,5 @@
 """错误的code码"""
-from src.common.error import APIException
+from common.error import APIException
 
 
 class ServerError(APIException):

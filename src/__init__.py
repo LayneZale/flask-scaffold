@@ -28,7 +28,7 @@ def create_app():
     app = Flask(__name__)
     app.name = 'flask-scaffold'
     # 初始化日志
-    from src.common.logger import Log
+    from common.logger import Log
     Log.init(app.name)
 
     # # Redis数据库连接初始化
@@ -40,7 +40,7 @@ def create_app():
     # db.init_app(app)
 
     # 加载蓝图模块
-    blueprints = ['src.apps.test:bp', ]
+    blueprints = ['apps.test:bp', ]
     for bp_name in blueprints:
         app.register_blueprint(import_string(bp_name))
 

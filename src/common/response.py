@@ -1,16 +1,14 @@
 """自定义response"""
 import os
 
-from flask import app
 
-from src.common.error import APIException
-from src.common.error_code import ServerError
+from common.error import APIException
+from common.error_code import ServerError
 
 from flask_restful import Api as _Api
 
 
 # 自定义全局异常
-
 class Api(_Api):
     def handle_error(self, e):
         if isinstance(e, APIException):
